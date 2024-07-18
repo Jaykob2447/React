@@ -1,0 +1,9 @@
+.imageCard {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+.userCard {
+  max-width: 400px;
+  max-height: 700px;
+}
