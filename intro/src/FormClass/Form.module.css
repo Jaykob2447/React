@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonSubmit {
+  max-width: 200px;
+  height: 20px;
+  color: black;
+}
