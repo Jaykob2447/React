@@ -3,5 +3,9 @@
     "react-router-dom": "^6.26.0",
     "saas": "^1.0.0",
     "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "formik": "^2.4.6",
+    "yup": "^1.4.0"
   }
 }
