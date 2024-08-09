@@ -7,6 +7,7 @@ function Header() {
       <Link to="/components">components</Link>
       <Link to="/about">about</Link>
       <Link to="/formik">Less Formik</Link>
+      <Link to="/userRedux">User Redux</Link>
     </>
   );
 }
