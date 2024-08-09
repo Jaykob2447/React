@@ -5,9 +5,8 @@ import { changeFavorite } from "./../store/slices/userSlice";
 const { user1, user2 } = USERS;
 function UserRedux({ favorite, setFavorite }) {
   const favoriteHeandler = ({ target: { value } }) => {
-    setFavorite(Boolean(value));
+    setFavorite(value);
   };
-  console.log(favorite);
   return (
     <div>
       <div>
@@ -16,9 +15,8 @@ function UserRedux({ favorite, setFavorite }) {
         <p>{user1.about}</p>
         <div>
           <button onClick={favoriteHeandler} value={favorite}>
-            ♡
+            ♡<p>{favorite ? "true" : "false"}</p>
           </button>
-          <p>{favorite ? "true" : "false"}</p>
         </div>
       </div>
       <div>
@@ -39,7 +37,7 @@ const mapStateToProps = (state) => ({
   favorite: state.favorite.favorite,
 });
 const mapDispatchToProps = (dispatch) => ({
-  setFavorite: (v) => dispatch(changeFavorite(Boolean(v))),
+  setFavorite: (v) => dispatch(changeFavorite(v)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);

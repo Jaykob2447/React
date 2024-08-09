@@ -26,10 +26,13 @@ const isFavouriteSlice = createSlice({
   initialState,
   reducers: {
     changeFavorite: (state, action) => {
-      const { payload } = action;
-      console.log(state.favorite, payload);
+      let { payload } = action;
+      if (payload === "true") {
+        payload = true;
+      } else {
+        payload = false;
+      }
       state.favorite = !payload;
-      //   console.log(state.favorite, payload);
     },
   },
 });
