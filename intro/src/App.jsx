@@ -6,6 +6,7 @@ import Components from "./components/RouterPlug/components";
 import About from "./components/RouterPlug/About";
 import FormikReg from "./components/FormikReg";
 import UserRedux from "./components/UsersRedux";
+import TodoApp from "./components/TodoApp";
 // import Slider from "./components/Slider";
 // import FormClass from "./FormClass";
 // import Card from "./userCard";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/formik" element={<FormikReg />} />
           <Route path="/userRedux" element={<UserRedux />} />
+          <Route path="/Todo" element={<TodoApp />} />
         </Routes>
       </Router>
       {/* <Card user={user} /> */}
