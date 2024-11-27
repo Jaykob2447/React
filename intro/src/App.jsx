@@ -7,13 +7,18 @@ import About from "./components/RouterPlug/About";
 import FormikReg from "./components/FormikReg";
 import UserRedux from "./components/UsersRedux";
 import TodoApp from "./components/TodoApp";
-// import Slider from "./components/Slider";
+import Card from "./userCard";
 // import FormClass from "./FormClass";
-// import Card from "./userCard";
+// import Slider from "./components/Slider";
 // import UserList from "./UserList";
 // import Form from "./Form";
 
-// const user = { isMale: true, followers: 12533 };  //for Card
+const user = {
+  isMale: true,
+  followers: 12533,
+  tweetsCount: 800,
+  followingcount: 455,
+}; //for Card
 function App() {
   return (
     <>
@@ -26,9 +31,9 @@ function App() {
           <Route path="/formik" element={<FormikReg />} />
           <Route path="/userRedux" element={<UserRedux />} />
           <Route path="/Todo" element={<TodoApp />} />
+          <Route path="/UserCard" element={<Card user={user} />} />
         </Routes>
       </Router>
-      {/* <Card user={user} /> */}
       {/*<UserList />*/}
       {/* {<Form />} */}
       {/* <Slider /> */}

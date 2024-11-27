@@ -22,6 +22,9 @@ function Header() {
         <li>
           <Link to="/Todo">Todo</Link>
         </li>
+        <li>
+          <Link to="/UserCard">Card</Link>
+        </li>
       </ul>
     </header>
   );
