@@ -1,11 +1,13 @@
 import { useState } from "react";
-import "./card.css";
+import "./userCard.css";
 
-function Card({ user: { isMale, followers, tweetsCount, followingcount } }) {
+function UserCard({
+  user: { isMale, followers, tweetsCount, followingcount },
+}) {
   const botGen = isMale ? "followMan" : "followWoman";
-  const [followersCount, setfollowers] = useState(followers);
+  const [followersCount, setfollowersCount] = useState(followers);
   function cengeFolow() {
-    setfollowers((followersCount) => followersCount + 1);
+    setfollowersCount((followersCount) => followersCount + 1);
   }
   /*
   Для більш корректної роботи треба додавати користувачу тіх 
@@ -52,4 +54,4 @@ function Card({ user: { isMale, followers, tweetsCount, followingcount } }) {
   );
 }
 
-export default Card;
+export default UserCard;

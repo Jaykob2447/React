@@ -7,7 +7,7 @@ import About from "./components/RouterPlug/About";
 import FormikReg from "./components/FormikReg";
 import UserRedux from "./components/UsersRedux";
 import TodoApp from "./components/TodoApp";
-import Card from "./userCard";
+import UserCard from "./userCard";
 // import FormClass from "./FormClass";
 // import Slider from "./components/Slider";
 // import UserList from "./UserList";
@@ -31,7 +31,7 @@ function App() {
           <Route path="/formik" element={<FormikReg />} />
           <Route path="/userRedux" element={<UserRedux />} />
           <Route path="/Todo" element={<TodoApp />} />
-          <Route path="/UserCard" element={<Card user={user} />} />
+          <Route path="/UserCard" element={<UserCard user={user} />} />
         </Routes>
       </Router>
       {/*<UserList />*/}
