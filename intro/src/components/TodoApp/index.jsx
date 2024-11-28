@@ -4,12 +4,11 @@ import { v4 as uuidv4 } from "uuid";
 import TodoList from "./TodoList";
 import { TASK_SCHEMA } from "../../utils";
 import styles from "./TodoApp.module.sass";
-import { addTasks, removeTask } from "../../store/slices/TodoSlice";
+import { addTasks, removeTask } from "../../store/slices/todoSlice";
 
-function Todo({ todo, setTask, remove }) {
+function Todo({ todos, setTask, remove }) {
   const heandelSubmit = (value, formikBag) => {
     const id = uuidv4();
-    console.log(id);
     const { task } = value;
     const tasks = { id, task };
     setTask(tasks);
@@ -18,7 +17,7 @@ function Todo({ todo, setTask, remove }) {
   return (
     <section>
       <ul>
-        {todo.map((val) => (
+        {todos.map((val) => (
           <TodoList taskObj={val} key={val.id} remove={remove} />
         ))}
       </ul>
@@ -44,7 +43,7 @@ function Todo({ todo, setTask, remove }) {
 }
 
 const mapStateToProps = (state) => ({
-  todo: state.todo.Todo,
+  todos: state.todo.todos,
 });
 
 const mapDispatchToProps = (dispatch) => ({
