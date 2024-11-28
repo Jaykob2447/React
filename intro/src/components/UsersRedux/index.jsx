@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import { USERS } from "./../store/slices/userSlice";
-import { changeFavorite } from "./../store/slices/userSlice";
+import { USERS } from "../../store/slices/userSlice";
+import { changeFavorite } from "../../store/slices/userSlice";
 
 const { user1, user2 } = USERS;
 function UserRedux({ favorite, setFavorite }) {

@@ -3,18 +3,16 @@ import { connect } from "react-redux";
 import TodoList from "./TodoList";
 import { TASK_SCHEMA } from "../../utils";
 import styles from "./TodoApp.module.sass";
-import { addTasks, removeTask } from "./../store/slices/TodoSlice";
+import { addTasks, removeTask } from "../../store/slices/TodoSlice";
 
 function Todo({ todo, setTask, remove }) {
   const heandelSubmit = (value, formikBag) => {
     const id = Object.keys(todo).length;
     const { task } = value;
-    const tasks = { id: id, task };
-    console.log(tasks);
+    const tasks = { id, task };
     setTask(tasks);
     formikBag.resetForm();
   };
-  console.log(remove);
   return (
     <section>
       <ul>
@@ -44,7 +42,7 @@ function Todo({ todo, setTask, remove }) {
 }
 
 const mapStateToProps = (state) => ({
-  todo: state.Todo.Todo,
+  todo: state.todo.Todo,
 });
 
 const mapDispatchToProps = (dispatch) => ({
