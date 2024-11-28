@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { connect } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 import TodoList from "./TodoList";
 import { TASK_SCHEMA } from "../../utils";
 import styles from "./TodoApp.module.sass";
@@ -7,7 +8,8 @@ import { addTasks, removeTask } from "../../store/slices/TodoSlice";
 
 function Todo({ todo, setTask, remove }) {
   const heandelSubmit = (value, formikBag) => {
-    const id = Object.keys(todo).length;
+    const id = uuidv4();
+    console.log(id);
     const { task } = value;
     const tasks = { id, task };
     setTask(tasks);
