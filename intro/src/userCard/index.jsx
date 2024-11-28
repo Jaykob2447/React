@@ -9,6 +9,7 @@ function UserCard({
   function cengeFolow() {
     setfollowersCount((followersCount) => followersCount + 1);
   }
+  const [isFullLoad, setFullLoad] = useState(false);
   /*
   Для більш корректної роботи треба додавати користувачу тіх 
   користувачів на якіх він підписаний, та робити перевірку якщо він вже
@@ -16,8 +17,13 @@ function UserCard({
    Ps: оскільки були ліньки верстати, довелося узяти таку людину 🤷‍♂️
   */
   return (
-    <div className="immitationFullLoad">
-      <article className="userCard">
+    <div className={isFullLoad ? "immitationFullLoad" : ""}>
+      <article
+        className="userCard"
+        onClick={() => {
+          setFullLoad(!isFullLoad);
+        }}
+      >
         <div className="userUp">
           <img
             className="userImg"
