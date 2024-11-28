@@ -5,7 +5,6 @@ import styles from "./FormikReg.module.sass";
 function FormikReg() {
   const initVal = { userLogin: "", userPassword: "" };
   const heandelSubmit = (value, formibBag) => {
-    console.log(value);
     formibBag.resetForm();
   };
   return (
@@ -37,7 +36,7 @@ function FormikReg() {
           <div className={styles.wrapField}>
             <Field
               className={styles.field}
-              type="text"
+              type="password"
               name="userPassword"
               placeholder="Your password"
             />
